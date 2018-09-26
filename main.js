@@ -123,28 +123,18 @@ else
 if (question.question16 ===1){
     user.rating +=3;
 }
-var primer1 = {
-    name : "test primer",
-    rating : 6,
-    retingEvil : 0,
-    activ : false
-}
-var primer2 = {
-    name : "test primer",
-    rating : 0,
-    retingEvil : 1,
-    activ : true
-}
-if (user.rating === primer1.rating){
-    console.log(user);
-    console.log(primer1);
-} 
-console.log(user);
-if (user.rating === primer2.rating){
-    console.log(user);
-    console.log(primer1);
-} 
-if (user.rating !== primer1.rating && user.rating !== primer2.rating){
-    console.log(primer1);
-}
 
+
+
+var result = {
+    otv1 : {
+        rating : 5
+    },
+    otv2 : {
+        rating : 2
+    },
+    otv3 : {
+        rating : 3
+    }
+}
+console.log(result);
