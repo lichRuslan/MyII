@@ -4,127 +4,147 @@ var user  = {
     retingEvil : 0,
     activ : true
 };
-console.log(user);
-var question1 = 1;// имели дело с кредитами
-var question2 = 1;// у вас есть задолжности
-var question3 = 1;//кредиты (не погашонные)
-var question4 = 1;//возможность оплатить не погашанный кредит
-var question5 = 1;//вы имеите судимость
-var question6 = 1;//вы старше 40 лет
-var question7 = 1;//вы моложе 25 лет
-var question8 = 1;//вы являетесь работающим человеком
-var question9 = 1;// ваша работа имеит риски
-var question10 = 1;// у вас есть поручитель на время вашего кредита
-var question11 = 1;// замужем (женаты)
-var question12 = 1;// у вас есть ребёнак
-var question13 = 1;// у вас имеится недвижемость
-var question14 = 1;// у вас есть транспортное имущество
-var question15 = 1;// вы плонируете брать кредит на срок больше года
-var question16 = 1;// данный вам кредит будет посивом или активом
+// console.log(user);
+var question = {
+    question1 : 0,// имели дело с кредитами
+    question2 : 1,// у вас есть задолжности
+    question3 : 0,//кредиты (не погашонные)
+    question4 : 1,//возможность оплатить не погашанный кредит
+    question5 : 0,//вы имеите судимость
+    question6 : 1,//вы старше 40 лет
+    question7 : 0,//вы моложе 25 лет
+    question8 : 1,//вы являетесь работающим человеком
+    question9 : 0,// ваша работа имеит риски
+    question10 : 1,// у вас есть поручитель на время вашего кредита
+    question11 : 0,// замужем (женаты)
+    question12 : 1,// у вас есть ребёнак
+    question13 : 0,// у вас имеится недвижемость
+    question14 : 1,// у вас есть транспортное имущество
+    question15 : 0,// вы плонируете брать кредит на срок больше года
+    question16 : 1,// данный вам кредит будет посивом или активом
+};
 
-
-if (question1 === 1){
+if (question.question1 === 1){
     user.rating +=1;
-    if (question2 == 1){
+    if (question.question2 == 1){
         user.activ = false;
     } 
-    else if (question2 === 0){
+    else if (question.question2 === 0){
         user.rating +=1;
-        if (question3 === 1){
-            if (question4 === 0){
+        if (question.question3 === 1){
+            if (question.question4 === 0){
                 user.activ = false;
             } 
-            else if (question4 == 1){
+            else if (question.question4 == 1){
                 user.rating +=1;
                 ///// идёт на вопрос 5
             }
         } 
     } 
 } else
-if (question5 ===1){
+if (question.question5 ===1){
     user.rating -=5;
     user.retingEvil +=1;
 } else 
-if (question5 === 0){
+if (question.question5 === 0){
     user.rating +=1;
 }
-if (question6 === 1){
+if (question.question6 === 1){
     user.rating -= 2;
 } else
-if (question6 === 0){
+if (question.question6 === 0){
     user.rating +=0;
 }
-if (question7 ===1){
+if (question.question7 ===1){
     user.rating -=2;
 }else
-if (question7 ===0){
+if (question.question7 ===0){
     user.rating += 0;
 }
-if (question8 ===1){
+if (question.question8 ===1){
     user.rating+=3;
-    if (question9 ===1){
+    if (question.question9 ===1){
         user.rating -= 1;
-    }else if(question9 ===0){
+    }else if(question.question9 ===0){
         user.rating += 1;
     }
 }else
-if (question8 === 0){
+if (question.question8 === 0){
     user.rating -=3;
     user.retingEvil -=1;
 }
-if (question10 === 1){
+if (question.question10 === 1){
     user.rating +3;
 }
 else 
-if (question10 ===0){
+if (question.question10 ===0){
     user.rating -=5;
     user.retingEvil -=1;
 }
-if (question11 ==1){
+if (question.question11 ==1){
     user.rating +=1;
 }
 else
-if (question11===0){
+if (question.question11===0){
     user.rating +=0;
 }
-if (question12===1){
+if (question.question12===1){
     user.rating +=1;
 }
 else 
-if (question12 === 0){
+if (question.question12 === 0){
     user.rating +=0;
 }
-if (question13 === 1){
+if (question.question13 === 1){
     user.rating  +=3;
 }
 else 
-if (question13 ===0){
+if (question.question13 ===0){
     user.rating -=1;
 }
-if (question14 ===1){
+if (question.question14 ===1){
     user.rating +=1;
 }
 else
-if (question14 ===0){
+if (question.question14 ===0){
     user.rating +=0;
 }
-if (question15===1){
+if (question.question15===1){
     user.rating +=2;
 }
 else 
-if (question15 === 0){
+if (question.question15 === 0){
     user.rating -=1;
 }
-if (question16 ===1){
+if (question.question16 ===1){
     user.rating -=1;
 }
 else 
-if (question16 ===1){
+if (question.question16 ===1){
     user.rating +=3;
 }
-
-
+var primer1 = {
+    name : "test primer",
+    rating : 6,
+    retingEvil : 0,
+    activ : false
+}
+var primer2 = {
+    name : "test primer",
+    rating : 0,
+    retingEvil : 1,
+    activ : true
+}
+if (user.rating === primer1.rating){
+    console.log(user);
+    console.log(primer1);
+} 
 console.log(user);
-
-
+if (user.rating === primer2.rating){
+    console.log(user);
+    console.log(primer1);
+} 
+if (user.rating !== primer1.rating && user.rating !== primer2.rating){
+    console.log(primer1);
+}
 
