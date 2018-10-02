@@ -137,4 +137,10 @@ var result = {
         rating : 3
     }
 }
-console.log(result);
+console.log(user);
+if (user.rating === result.otv1){
+    console.log (result.otv1);
+}else
+if (user.rating === result.otv2){
+    console.log (result.otv2);
+}
